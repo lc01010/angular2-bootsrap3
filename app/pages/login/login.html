@@ -1,0 +1,41 @@
+<div class="container w-xxl w-auto-xs login" >
+  <a href="" class="navbar-brand block m-t ng-binding">Angular</a>
+  <div class="m-b-lg">
+    <div class="wrapper text-center">
+      <strong>Angular2.0知识点练习</strong>
+    </div>
+    <form name="form" class="form-validation ng-pristine ng-valid-email ng-invalid ng-invalid-required" #logForm="ngForm" (ngSubmit)="onSubmit(logForm.value)">
+      <div class="text-danger wrapper text-center" [hidden]="logForm.valid || name.pristine || passwd.pristine">
+          <div type="danger" class="alert ng-isolate-scope alert-dismissable" [ngClass]="{'alert-warning':logForm.pristine,'alert-danger':!logForm.pristine}">
+            <button ng-show="closeable" type="button" class="close" ng-click="close()">
+                <span aria-hidden="true">×</span>
+                <span class="sr-only">Close</span>
+            </button>
+            <div ng-transclude=""><span class="ng-binding ng-scope">
+              <ul style="text-align:left;margin-bottom:0px;">
+                <li *ngIf="!name.valid">用户名不能为空</li>
+                <li *ngIf="!passwd.valid">密码不能为空</li>
+                <!--<li *ngIf="logForm.hasError('required', 'name')">用户名长度至少6位</li> -->
+              </ul>
+            
+            </span></div>
+        </div>
+      </div>
+      <div class="list-group list-group-sm">
+        <div class="list-group-item">
+          <input placeholder="UserName" class="form-control no-border" required="" type="text" ngControl="name" #name="ngForm">
+          
+        </div>
+        <div class="list-group-item">
+           <input placeholder="Password" class="form-control no-border"  required="" type="password" ngControl="passwd" #passwd="ngForm">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!logForm.form.valid || logForm.pristine" (click)="isSubmit=true">Log in</button>
+      
+      
+    </form>
+  </div>
+  <div class="text-center"><p class="ng-scope">
+  <small class="text-muted">Web app framework base on Bootstrap3 and AngularJS2.0<br>© 2016</small>
+</p></div>
+</div>

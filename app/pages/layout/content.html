@@ -1,0 +1,13 @@
+<div class="app ng-scope app-header-fixed" [ngClass]="{'app-aside-dock':navtop,container:minscreen,'app-aside-folded':navfolded}">
+    <div ng-header></div>
+    <div ng-aside></div>
+    <div class="app-content ng-scope h-full">
+        <!-- uiView:  -->
+        <div class="app-content-body app-content-full fade-in-up ng-scope h-full">
+            <!-- hbox layout -->
+            <div class="hbox hbox-auto-xs bg-light  ng-scope" ng-content>
+
+            </div>
+        </div>
+        <div ng-footer></div>
+    </div>
