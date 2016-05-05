@@ -1,6 +1,10 @@
-node_modules/
-.typings/
-.app/*.js
-.app/*.js.map
-.metadata
-.gitignore
+/node_modules
+npm-debug.log
+/typings
+/app/**/*.js
+/app/**/*.js.map
+/app/**/*.d.ts
+/app/**/**/*.js
+/app/**/**/*.js.map
+/app/**/**/*.d.ts
+!.gitignore
