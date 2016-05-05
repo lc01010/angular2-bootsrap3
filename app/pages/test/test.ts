@@ -1,13 +1,13 @@
 import {Component} from 'angular2/core';
 import {NgHeader,NgAside,NgFooter} from '../layout/layout';
 import {CORE_DIRECTIVES} from 'angular2/common';
-import {Alert,ACCORDION_DIRECTIVES,DROPDOWN_DIRECTIVES,TAB_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
+import {AlertComponent,ACCORDION_DIRECTIVES,DROPDOWN_DIRECTIVES,TAB_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
 import { Modal} from 'angular2-modal';
 
 @Component({
   selector: '[ng-content]',
   templateUrl:"./app/pages/test/test.html",
-  directives: [Alert, CORE_DIRECTIVES],
+  directives: [AlertComponent, CORE_DIRECTIVES],
   providers: [Modal]
 })
 export class NgContent {

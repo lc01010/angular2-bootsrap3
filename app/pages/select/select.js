@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../layout/layout', 'angular2/common', 'ng2-bootstrap/ng2-bootstrap', 'ng2-select/ng2-select', './data'], function(exports_1, context_1) {
+System.register(['angular2/core', '../layout/layout', 'angular2/common', 'ng2-select/ng2-select', './data'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', '../layout/layout', 'angular2/common', 'ng2-bo
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, layout_1, common_1, ng2_bootstrap_1, ng2_select_1, data_1;
+    var core_1, layout_1, common_1, ng2_select_1, data_1;
     var NgContent, select;
     return {
         setters:[
@@ -22,9 +22,6 @@ System.register(['angular2/core', '../layout/layout', 'angular2/common', 'ng2-bo
             },
             function (common_1_1) {
                 common_1 = common_1_1;
-            },
-            function (ng2_bootstrap_1_1) {
-                ng2_bootstrap_1 = ng2_bootstrap_1_1;
             },
             function (ng2_select_1_1) {
                 ng2_select_1 = ng2_select_1_1;
@@ -94,7 +91,7 @@ System.register(['angular2/core', '../layout/layout', 'angular2/common', 'ng2-bo
                     core_1.Component({
                         selector: '[ng-content]',
                         templateUrl: './app/pages/select/select.html',
-                        directives: [ng2_select_1.Select, ng2_select_1.SELECT_DIRECTIVES, common_1.NgClass, common_1.CORE_DIRECTIVES, common_1.FORM_DIRECTIVES, ng2_bootstrap_1.ButtonCheckbox]
+                        directives: [ng2_select_1.Select, ng2_select_1.SELECT_DIRECTIVES, common_1.NgClass, common_1.CORE_DIRECTIVES, common_1.FORM_DIRECTIVES]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], NgContent);

@@ -3,7 +3,7 @@ import {NgHeader,NgAside,NgFooter} from '../layout/layout';
 import {CORE_DIRECTIVES,FORM_DIRECTIVES} from 'angular2/common';
 
 
-import {ButtonCheckbox} from 'ng2-bootstrap/ng2-bootstrap';
+
 import {Dragula, DragulaService} from 'ng2-dragula/ng2-dragula';
 import {Select} from 'ng2-select/ng2-select';
 

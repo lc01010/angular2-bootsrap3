@@ -1,0 +1,24 @@
+<div class="ng-scope">
+    <div class="bg-light lter b-b wrapper-md ng-scope">
+        <h1 class="m-n font-thin h3">TableList</h1>
+    </div>
+    <div class="wrapper-md ng-scope">
+        <div class="row">
+            <div class="col-sm-6" >
+                <div class="panel" [ngClass]="panelDefaultClass">
+                    <div class="panel-heading">
+                        {{panelTitle}}
+                    </div>
+                    
+                        <ng-table [pagination]="false" [search]="false" [columns]='columns' [datasource]='tableconfig' (loadDataList)="loadDataList($event)"></ng-table>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        </div>
+    
+
+</div>

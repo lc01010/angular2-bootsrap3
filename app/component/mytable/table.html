@@ -1,0 +1,57 @@
+<div class="panel-body b-b b-light" *ngIf="search">
+    Search: <input class="form-control input-sm w-sm inline m-r" type="text" [(ngModel)]="filter" placeholder="搜索">
+    <div class="column">
+{{content}}
+    </div>
+</div>
+
+<table [ngClass]="tableClass">
+    <thead>
+        <tr>
+            
+            <th class="footable-visible footable-sortable" *ngFor="#column of columns;#i=index" [ngClass]="{'footable-last-column':i==columns.length,'footable-first-column':i==0}" (click)='sort(column)'>
+                {{column.name}}
+                <span class="footable-sort-indicator"></span></th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr [ngClass]='{"footable-odd":j%2!=0,"footable-even":j%2==0}' style="display: table-row;" *ngFor="#row of rows |stringFilter: filter|sorter:sorterColumn:order | paginate: config;#j=index">
+            <td *ngFor="#col of columns;#i=index" [ngClass]="{'footable-last-column':i==columns.length,'footable-first-column':i==0}">{{row[col.name]}}</td>
+        </tr>
+    </tbody>
+    <tfoot class="hide-if-no-paging" *ngIf="pagination">
+        <tr>
+            <td colspan="5" class="text-center footable-visible">
+                
+                <pagination-controls #p [id]="config.id" (pageChange)="getPage($event)" maxSize="7" autoHide="true" >
+
+                    <ul class="pagination">
+
+                        <li class="footable-page-arrow" [class.disabled]="p.isFirstPage()" *ngIf="p.directionLinks">
+                            <a (click)="p.previous()">上一页
+                                                < </a>
+                        </li>
+
+
+                        <li *ngFor="#page of p.pages" [class.active]="p.getCurrent() === page.value" class="footable-page">
+                            <a (click)="p.setCurrent(page.value);" *ngIf="p.getCurrent() !== page.value">
+                                <span>{{ page.label }}</span>
+                            </a>
+                            <a *ngIf="p.getCurrent() === page.value">
+                                <span>{{ page.label }}</span>
+                            </a>
+                        </li>
+
+                        <li class="footable-page-arrow" [class.disabled]="p.isLastPage()" *ngIf="p.directionLinks">
+                            <a (click)="p.next()"> > 下一页</a>
+                        </li>
+                    </ul>
+
+                </pagination-controls>
+
+
+            </td>
+        </tr>
+    </tfoot>
+</table>

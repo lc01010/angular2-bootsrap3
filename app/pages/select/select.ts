@@ -1,7 +1,7 @@
 import {Component, Input, Directive} from 'angular2/core';
 import {NgHeader, NgAside, NgFooter} from '../layout/layout';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES, NgClass} from 'angular2/common';
-import {ButtonCheckbox} from 'ng2-bootstrap/ng2-bootstrap';
+
 import {Dragula, DragulaService} from 'ng2-dragula/ng2-dragula';
 import {Select, SELECT_DIRECTIVES} from 'ng2-select/ng2-select';
 import {genData} from './data';
@@ -10,7 +10,7 @@ import {genData} from './data';
     selector: '[ng-content]',
 
     templateUrl: './app/pages/select/select.html',
-    directives: [Select, SELECT_DIRECTIVES, NgClass, CORE_DIRECTIVES, FORM_DIRECTIVES, ButtonCheckbox]
+    directives: [Select, SELECT_DIRECTIVES, NgClass, CORE_DIRECTIVES, FORM_DIRECTIVES]
     //   styleUrls:["./app/pages/home/home.css"]
 })
 export class NgContent {

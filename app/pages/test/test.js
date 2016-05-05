@@ -61,7 +61,7 @@ System.register(['angular2/core', '../layout/layout', 'angular2/common', 'ng2-bo
                     core_1.Component({
                         selector: '[ng-content]',
                         templateUrl: "./app/pages/test/test.html",
-                        directives: [ng2_bootstrap_1.Alert, common_1.CORE_DIRECTIVES],
+                        directives: [ng2_bootstrap_1.AlertComponent, common_1.CORE_DIRECTIVES],
                         providers: [angular2_modal_1.Modal]
                     }), 
                     __metadata('design:paramtypes', [angular2_modal_1.Modal])
